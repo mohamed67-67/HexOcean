@@ -1,7 +1,7 @@
 import React from 'react';
+import './App.css';
 import { Provider } from 'react-redux';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import './App.css';
 import Main from './Components/Main';
 import Sucsess from './Components/Sucsess';
 import Trial from './Components/Trial';

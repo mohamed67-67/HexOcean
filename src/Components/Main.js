@@ -9,7 +9,7 @@ import getUid  from 'get-uid'
 
 
 
-
+//material UI styling
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   
   function Main() {
     
-    const State = useSelector(state => state.INOrder)
+    
     const dispatch = useDispatch();
 
 
@@ -50,6 +50,8 @@ const useStyles = makeStyles((theme) => ({
 
     const [order, setOrder] = useState({})
 
+    // Cases of Order Array Depending on the type
+
     useEffect(()=>{
         if (data.type[0] === 'pizza') {setOrder({type: 'Pizza',preparation_time : data.time, name: data.name, no_of_slices : data.NoSlices, diameter : data.diameter ,id: getUid() })}
         else if(data.type[0] === 'Soup'){setOrder({type: 'soup',preparation_time : data.time, name: data.name,spiceness : data.spiceness ,id: getUid()})}
@@ -57,8 +59,10 @@ const useStyles = makeStyles((theme) => ({
     },[data])
 
 
+    // MAterial UI Styling
     const classes = useStyles();
 
+    // Handling submit of the order and modifying redux State
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(Adding(order))

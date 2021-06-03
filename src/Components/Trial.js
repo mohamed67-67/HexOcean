@@ -14,6 +14,8 @@ function Trial() {
 
 
 
+    // Posting the State of redux  Note: didn't work
+
     const handleClick = () => {
         if(State.length)
             history.push('/success')

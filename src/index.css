@@ -18,14 +18,14 @@ body {
   position: relative;
 }
 
-.makeStyles-container-3 {
+form {
   display: grid !important;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: 'main extra';
 }
 
-.makeStyles-container-3 .main {
+form .main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -33,18 +33,18 @@ body {
   margin-left: 5rem;
 }
 
-.makeStyles-container-3 .extra {
+form .extra {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
-.makeStyles-container-3 .extra .MuiInput-formControl {
+form .extra .MuiInput-formControl {
   align-self: center;
 }
 
-.makeStyles-container-3 .MuiButton-containedPrimary {
+form .MuiButton-containedPrimary {
   position: absolute !important;
   bottom: -55px;
   right: 20px;
@@ -53,7 +53,7 @@ body {
   font-weight: 700;
 }
 
-.makeStyles-container-3 .MuiInput-formControl {
+form .MuiInput-formControl {
   width: 12rem;
   text-align: start;
 }
